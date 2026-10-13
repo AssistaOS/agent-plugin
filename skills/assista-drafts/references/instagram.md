@@ -4,8 +4,9 @@
 
 - **2,200 characters** in the caption.
 - **An image is required.** Instagram does not take text-only posts: one image
-  or a carousel of 2 to 10. You are writing the caption. Tell the user the
-  post needs an image, chosen in Assista before it can go out.
+  or a carousel of 2 to 10. `submit_drafts` refuses a text-only Instagram
+  draft (`needs-image`). Send it as a graphic instead: `submit_graphics` with
+  `channels: ["instagram"]` (see `graphics.md`).
 - Links in captions are not clickable, and Assista's checks refuse a URL in
   the body. Say "link in bio" if the link matters.
 

@@ -1,6 +1,6 @@
 ---
 name: assista-drafts
-description: Draft social posts in the writer's own voice for LinkedIn, X, Threads, Facebook or Instagram, and send them to their Assista approval queue. Use when the user asks to write, draft or rewrite a post for any of those channels, or mentions their weekly Assista interview. Requires the Assista connection (voice brief, interview, submit drafts, feedback).
+description: Draft social posts, graphics and short videos in the writer's own voice for LinkedIn, X, Threads, Facebook or Instagram, and send them to their Assista approvals. Use when the user asks to write, draft or rewrite a post for any of those channels, answer or use their weekly Assista interview, or check what they sent and how much of their plan is left. Requires the Assista connection.
 ---
 
 # Drafting posts for Assista
@@ -17,17 +17,20 @@ invent: it is documented, and you can read it. Never write from a blank page.
    their edits. An edit is the strongest signal you will get: whatever they
    changed, do not do again.
 3. **`get_interview`**: this week's three questions and their answers. The
-   answers are the raw material. If `complete` is false, draft only from the
-   answers that exist, and say which question is still open.
+   answers are the raw material. If the writer answers a question in the
+   conversation, save it with **`answer_interview`** (`question_id` from
+   `get_interview`; `interview_id` may be left out). Assista drafts nothing
+   from the answers on its own: you write the drafts. If there is no
+   interview this week (`interview_id: null`), draft from what the user tells
+   you; no interview is needed to submit.
 4. **Pick the channel.** Use the one the user named. If they named none, ask,
    or default to LinkedIn. Open the matching file in `references/` and follow
    it: the limits there are hard, and the norms are what that audience expects.
 5. Write **up to three drafts**, each with a genuinely different angle. Not
    three versions of one post.
-6. **`submit_drafts`** with the `interview_id` from step 3. If the tool accepts
-   a `channel` field, set it. If it does not, put the channel at the start of
-   each draft's `angle` (for example `x: the pricing mistake`) so the writer
-   sees where it is meant to go.
+6. **`submit_drafts`** with each draft's `channel` (`linkedin`, `x`,
+   `threads`, `facebook` or `instagram`; LinkedIn when left out). Pass the
+   `interview_id` from step 3 when there is one; leave it out otherwise.
 
 | Channel | Reference | Hard limit |
 |---|---|---|
@@ -79,8 +82,12 @@ density above this writer's own habit, broetry line breaks, emoji bullets,
 generic imperative lists, hedging. They do not block, but a draft with several
 is a draft they will edit or reject. Fix what you can before submitting.
 
-A draft over the channel's character limit is refused when it is published,
-not when it is submitted. Count before you submit.
+Two more refusals come from the channel, at submit time:
+
+- **`over-channel-limit`**: the draft is longer than the channel takes (the
+  table above). Cut it and resubmit.
+- **`needs-image`**: Instagram does not take text alone. Send it as a graphic
+  with `submit_graphics` instead.
 
 ## What you cannot do
 
@@ -89,9 +96,20 @@ to the writer's approval queue in Assista; they decide what goes out, where and
 when. Say so plainly when the user asks you to post something. Do not pretend
 to have posted it.
 
+Two reads help instead:
+
+- **`get_submissions`**: where everything sent from their tools stands
+  (`rendering`, `pending`, `approved`, `declined`, `expired`, `published` with
+  its link, or `failed` with the reason). Use it when they ask "did it go out?"
+- **`get_usage`**: their plan, this month's posts and videos against what it
+  allows, and whether their tool does the drafting (`own_tool`). Drafts sent
+  from their tool are free; videos count against the plan.
+
 ## After submitting
 
-`submit_drafts` returns one entry per draft, in order, with `status`
-(`queued_for_approval` or `rejected`), the `band` (green / amber / red), the
-specificity score and any flags. Tell the user what got queued, what was
-refused and why, and that the drafts are waiting for them in Assista.
+`submit_drafts` returns one entry per draft, in order, with its `channel`,
+`status` (`queued_for_approval` or `rejected`), the `band` (green / amber /
+red), the specificity score, any flags and, for a queued draft, the `url` of
+its post in Assista. Assista sends the writer a note (email or Telegram) so
+they can approve in one tap. Tell the user what got queued, what was refused
+and why, and give them each `url`.

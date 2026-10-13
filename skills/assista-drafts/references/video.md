@@ -70,5 +70,7 @@ saved. Fix and resend; no need to ask the user.
 ## After submitting
 
 `submit_video` answers `ok`, the two verdicts (`readable`, `on_brand`), any
-warnings, and a link. Tell the user: "Your video is being made and is waiting
+warnings, and a link to the post. Each plan makes a set number of videos a
+month; past it, `submit_video` answers `ok: false` with `renders` and nothing
+is saved (`get_usage` shows the count before you start). Tell the user: "Your video is being made and is waiting
 for your approval: <url>". It is not posted until they approve it in Assista.

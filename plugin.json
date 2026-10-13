@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "assista",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Draft posts in your own voice for LinkedIn, X, Threads, Facebook and Instagram, and send them to your Assista approvals. Nothing publishes until you approve it.",
   "author": {
     "name": "Assista",

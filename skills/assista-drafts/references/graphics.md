@@ -56,7 +56,8 @@ writer's rules, comes back `ok: false` with the issues and nothing is saved
 for it: fix it and send that one again. A graphic that is saved with a verdict
 of `false` is in the writer's approvals anyway; say which issue to fix.
 
-End with the sentence the tool gives you, in this pattern:
+Each `url` opens that graphic's post in Assista. End with the sentence the
+tool gives you, in this pattern:
 
 > N graphics are ready for your approval: <url>
 

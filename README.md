@@ -4,10 +4,13 @@ Connect your writing tool to Assista. It reads your voice brief and this week's
 interview, drafts posts for LinkedIn, X, Threads, Facebook or Instagram, and
 sends them to your Assista approvals.
 
-**What this can do:** read your voice brief, your interview answers and your
-recent feedback, and send up to three drafts at a time to your approvals.
-**What it cannot do:** publish, schedule or spend anything. Every post waits in
-Assista until you approve it.
+**What this can do:** read your voice brief, brand kit, interview and recent
+feedback; save your interview answers; send drafts (one channel each),
+graphics and short videos to your approvals; and tell you where each one
+stands and how much of your plan is used. Assista sends you a note for every
+submission, and each one links to its post in Assista.
+**What it cannot do:** publish, schedule, approve or spend anything. Every post
+waits in Assista until you approve it.
 
 You sign in to Assista in your browser the first time you use it. There is no
 key to copy and nothing secret in this repository.
@@ -130,8 +133,10 @@ the `assista` entry in `.mcp.json`.
 | `gemini-extension.json`, `GEMINI.md` | Gemini CLI extension |
 | `server.json` | Listing for the official server registry |
 
-The connection has four tools: `get_voice_brief`, `get_interview`,
-`get_feedback` and `submit_drafts`. There is no publish tool, and there will not
+The connection has ten tools, all reads or submissions: `get_voice_brief`,
+`get_interview`, `submit_drafts`, `get_feedback`, `get_brand_kit`,
+`submit_graphics`, `submit_video`, `answer_interview`, `get_submissions` and
+`get_usage`. There is no publish, schedule or approve tool, and there will not
 be one.
 
 ## Support
