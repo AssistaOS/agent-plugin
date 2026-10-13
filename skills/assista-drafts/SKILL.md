@@ -41,6 +41,7 @@ Writing one idea for several channels? Write each version for its channel.
 A LinkedIn post cut down to 280 characters is not an X post.
 
 For a graphic or a carousel instead of a text post, follow `references/graphics.md` (`get_brand_kit`, then `submit_graphics`).
+For a short brand video, follow `references/video.md` (`get_brand_kit`, then `submit_video`).
 
 ## What a draft must contain
 
