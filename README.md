@@ -1,19 +1,45 @@
-# Assista for your writing tool
+# Assista: write LinkedIn, X and Threads posts in your voice from Claude Code, Codex and Cursor
 
-Connect your writing tool to Assista. It reads your voice brief and this week's
-interview, drafts posts for LinkedIn, X, Threads, Facebook or Instagram, and
-sends them to your Assista approvals.
+```sh
+claude mcp add --transport http assista https://mcp.getassista.com/mcp
+```
 
-**What this can do:** read your voice brief, brand kit, interview and recent
-feedback; save your interview answers; send drafts (one channel each),
-graphics and short videos to your approvals; and tell you where each one
-stands and how much of your plan is used. Assista sends you a note for every
-submission, and each one links to its post in Assista.
-**What it cannot do:** publish, schedule, approve or spend anything. Every post
-waits in Assista until you approve it.
+Your Claude writes it. Assista makes sure it sounds like you and waits for your
+tap. Free: your tool pays for the model, we never call one for you.
+
+<!-- Badges: uncomment once each listing is live.
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-com.getassista%2Fassista-black)](https://registry.modelcontextprotocol.io)
+[![Smithery](https://smithery.ai/badge/assista)](https://smithery.ai)
+[![Glama](https://glama.ai/mcp/servers/assista/badge)](https://glama.ai/mcp/servers)
+-->
+
+Connect your writing tool to Assista. It reads your voice brief, your brand
+and this week's interview, drafts posts for LinkedIn, X, Threads, Facebook or
+Instagram, and sends them to your Assista approvals. Assista checks every
+draft with deterministic rules (zero tokens) and holds it until you approve.
 
 You sign in to Assista in your browser the first time you use it. There is no
 key to copy and nothing secret in this repository.
+
+## The tools
+
+| Tool | Kind | What it does |
+|---|---|---|
+| `get_voice_brief` | read | Your voice brief, banned words, lines to avoid, recent published posts |
+| `get_interview` | read | This week's three questions and your answers |
+| `get_feedback` | read | What you approved, edited or turned down, with your edits |
+| `get_brand_kit` | read | Palette, type, templates and approved assets for graphics and video |
+| `submit_drafts` | submit | Up to three text drafts, checked, then sent to your approvals |
+| `submit_graphics` | submit | One to six graphics or carousels, drawn by Assista, sent to your approvals |
+| `submit_video` | submit | One short brand video, where video is switched on for your account |
+
+## What it cannot do
+
+There is no publish, schedule, billing or key tool, and there will not be one.
+Your tool can only read your material and send work to your approvals. Every
+post waits in Assista until you approve it, and Assista publishes it at your
+hour. A draft that breaks a rule (a link in the body, Markdown, a hashtag
+stack) is refused with the rule id so your tool can fix it and resend.
 
 ## Install
 
@@ -52,11 +78,16 @@ Start a new Codex session afterwards.
 
 ### Cursor
 
-Install **Assista** from the Cursor Marketplace (Customize → Plugins), choose
-a project or user scope, then sign in when Cursor asks.
+[Add to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=assista&config=eyJ1cmwiOiJodHRwczovL21jcC5nZXRhc3Npc3RhLmNvbS9tY3AifQ%3D%3D),
+or put this in `.cursor/mcp.json` (project) or `~/.cursor/mcp.json` (global):
 
-Before the listing is live, clone this repository into
-`~/.cursor/plugins/local/assista` and reload the window.
+```json
+{ "mcpServers": { "assista": { "url": "https://mcp.getassista.com/mcp" } } }
+```
+
+Once the listing is live, install **Assista** from the Cursor Marketplace
+(Customize → Plugins) to get the writing guide too. Before then, clone this
+repository into `~/.cursor/plugins/local/assista` and reload the window.
 
 ### Gemini CLI
 
@@ -71,6 +102,29 @@ Then run `/mcp auth assista` and sign in. `/draft` runs the same steps as
 
 Turn on `chat.plugins.enabled`, run **Chat: Install Plugin From Source** and
 enter `https://github.com/AssistaAI/agent-plugin`.
+
+Or add only the server:
+
+```sh
+code --add-mcp '{"name":"assista","type":"http","url":"https://mcp.getassista.com/mcp"}'
+```
+
+### Windsurf and Zed (unverified)
+
+Windsurf, `~/.codeium/windsurf/mcp_config.json`:
+`{ "mcpServers": { "assista": { "serverUrl": "https://mcp.getassista.com/mcp" } } }`.
+Zed, `settings.json`:
+`{ "context_servers": { "assista": { "url": "https://mcp.getassista.com/mcp" } } }`.
+If sign-in does not open, run the server through
+`npx -y mcp-remote https://mcp.getassista.com/mcp` instead.
+
+### OpenCode
+
+```json
+{ "mcp": { "assista": { "type": "remote", "url": "https://mcp.getassista.com/mcp" } } }
+```
+
+in `opencode.json`, then `opencode mcp auth assista`.
 
 ### Any other tool
 
@@ -133,11 +187,24 @@ the `assista` entry in `.mcp.json`.
 | `gemini-extension.json`, `GEMINI.md` | Gemini CLI extension |
 | `server.json` | Listing for the official server registry |
 
-The connection has ten tools, all reads or submissions: `get_voice_brief`,
-`get_interview`, `submit_drafts`, `get_feedback`, `get_brand_kit`,
-`submit_graphics`, `submit_video`, `answer_interview`, `get_submissions` and
-`get_usage`. There is no publish, schedule or approve tool, and there will not
-be one.
+The connection has the seven tools listed above. There is no publish tool,
+and there will not be one.
+
+## Privacy
+
+Assista stores the drafts, graphics and videos your tool submits, their check
+results and your decisions; nothing else from your session. Drafts you never
+decide on expire after seven days. Keys are stored only as a hash. Details,
+retention and sub-processors: https://getassista.com/legal/privacy and
+https://getassista.com/legal/subprocessors. Data protection: dpo@getassista.com.
+
+## Want Assista to write for you?
+
+The free plan is for writing from your own tool. Paid plans add a draft in your
+inbox every morning, the weekly interview, campaigns, graphics and video, and
+more channels: https://getassista.com/pricing
+
+Docs: https://getassista.com/claude-code and https://getassista.com/developers
 
 ## Support
 
