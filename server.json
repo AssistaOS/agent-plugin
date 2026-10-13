@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.getassista/assista",
+  "title": "Assista",
+  "description": "Drafts in your own voice for LinkedIn, X, Threads, Facebook and Instagram, sent to your approvals.",
+  "repository": {
+    "url": "https://github.com/getassista/agent-plugin",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.getassista.com/mcp"
+    }
+  ]
+}

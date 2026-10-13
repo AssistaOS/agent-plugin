@@ -1,0 +1,13 @@
+{
+  "name": "assista",
+  "owner": {
+    "name": "Assista"
+  },
+  "plugins": [
+    {
+      "name": "assista",
+      "source": "./",
+      "description": "Draft posts in your own voice for LinkedIn, X, Threads, Facebook and Instagram, and send them to your Assista approvals. Nothing publishes until you approve it."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "assista",
+  "version": "0.1.0",
+  "description": "Draft posts in your own voice for LinkedIn, X, Threads, Facebook and Instagram, and send them to your Assista approvals. Nothing publishes until you approve it.",
+  "mcpServers": {
+    "assista": {
+      "httpUrl": "https://mcp.getassista.com/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

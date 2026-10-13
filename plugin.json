@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "assista",
+  "version": "0.1.0",
+  "description": "Draft posts in your own voice for LinkedIn, X, Threads, Facebook and Instagram, and send them to your Assista approvals. Nothing publishes until you approve it.",
+  "author": {
+    "name": "Assista",
+    "email": "paul@getassista.com",
+    "url": "https://getassista.com"
+  },
+  "homepage": "https://getassista.com",
+  "repository": "https://github.com/getassista/agent-plugin",
+  "license": "MIT",
+  "keywords": ["writing", "linkedin", "x", "threads", "facebook", "instagram", "ghostwriting", "voice", "approvals"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Assista",
+        "shortDescription": "Drafts in your voice, sent to your approvals",
+        "longDescription": "Read your Assista voice brief and this week's interview, draft posts for LinkedIn, X, Threads, Facebook or Instagram, and send them to your Assista approvals. Nothing publishes until you approve it in Assista.",
+        "developerName": "Assista",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://getassista.com",
+        "privacyPolicyURL": "https://getassista.com/legal/privacy",
+        "termsOfServiceURL": "https://getassista.com/legal/terms",
+        "defaultPrompt": [
+          "Draft three LinkedIn posts from this week's interview",
+          "Write an X post about what I shipped this week",
+          "Turn my last LinkedIn post into a Threads post"
+        ],
+        "brandColor": "#0A0A0A",
+        "composerIcon": "./assets/logo.svg",
+        "logo": "./assets/logo.svg"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+---
+description: Draft posts in my voice and send them to my Assista approvals
+argument-hint: "[channel] [what the post is about]"
+---
+
+Draft posts for me with Assista and send them to my approvals. Follow the
+`assista-drafts` skill for the full rules; this is the short version.
+
+What I asked for: $ARGUMENTS
+
+1. Call `get_voice_brief` and read it, including my recent posts. They are the
+   target.
+2. Call `get_feedback` and do not repeat anything I edited out or rejected.
+3. Call `get_interview`. Draft from my answers. If an answer is missing, say
+   which question is still open.
+4. Pick the channel I named above (LinkedIn, X, Threads, Facebook or
+   Instagram). If I named none, use LinkedIn. Open the matching
+   `references/<channel>.md` from the skill and respect its limits.
+5. Write up to three drafts, each with a different angle and one concrete
+   detail that only I could have written. Plain text, no links, no Markdown.
+6. Call `submit_drafts` with the `interview_id`. If a draft is refused, fix the
+   named rule and resubmit it once.
+
+Finish with:
+
+- what was sent to my approvals and what was refused, with the reason;
+- one line saying nothing has been published, and that I decide what goes out;
+- the approval link on its own line: https://app.getassista.com/today
+
+If the Assista tools are not available, tell me to connect my writing tool to
+Assista (run `/mcp` and sign in to `assista`), and stop. Never claim a post was
+published.

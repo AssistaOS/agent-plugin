@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "assista": {
+      "type": "http",
+      "url": "https://mcp.getassista.com/mcp"
+    }
+  }
+}

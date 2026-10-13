@@ -1,0 +1,20 @@
+{
+  "name": "assista",
+  "interface": {
+    "displayName": "Assista"
+  },
+  "plugins": [
+    {
+      "name": "assista",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/getassista/agent-plugin.git"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
