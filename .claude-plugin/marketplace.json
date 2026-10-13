@@ -19,7 +19,7 @@
         "url": "https://getassista.com"
       },
       "homepage": "https://getassista.com",
-      "repository": "https://github.com/getassista/agent-plugin",
+      "repository": "https://github.com/AssistaAI/agent-plugin",
       "license": "MIT",
       "category": "productivity",
       "keywords": ["writing", "linkedin", "x", "threads", "facebook", "instagram", "ghostwriting", "voice", "approvals"]

@@ -9,11 +9,11 @@
     "url": "https://getassista.com"
   },
   "homepage": "https://getassista.com",
-  "repository": "https://github.com/getassista/agent-plugin",
+  "repository": "https://github.com/AssistaAI/agent-plugin",
   "license": "MIT",
   "keywords": ["writing", "linkedin", "x", "threads", "facebook", "instagram", "ghostwriting", "voice", "approvals"],
   "icon": "./assets/logo.svg",
-  "documentationUrl": "https://github.com/getassista/agent-plugin#readme",
+  "documentationUrl": "https://github.com/AssistaAI/agent-plugin#readme",
   "supportUrl": "https://getassista.com/contact",
   "privacyPolicyUrl": "https://getassista.com/legal/privacy",
   "termsOfServiceUrl": "https://getassista.com/legal/terms"

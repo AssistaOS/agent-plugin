@@ -1,7 +1,7 @@
-# Publishing `getassista/agent-plugin`
+# Publishing `AssistaAI/agent-plugin`
 
 This directory (`plugins/assista/` in AssistaOS) is the complete root of the
-public repository `getassista/agent-plugin`. AssistaOS stays private; only this
+public repository `AssistaAI/agent-plugin`. AssistaOS stays private; only this
 folder is pushed.
 
 Items marked **(unverified)** could not be checked against live documentation
@@ -31,14 +31,14 @@ starts there.
 ## 1. Create the repository and push this folder
 
 1. On GitHub, create the organisation `getassista` if it does not exist, then a
-   **public**, empty repository `getassista/agent-plugin` (no README, no
+   **public**, empty repository `AssistaAI/agent-plugin` (no README, no
    licence: both are in this folder).
 2. From the AssistaOS root, split this folder's history into its own branch and
    push it as `main`:
 
    ```sh
    git subtree split --prefix plugins/assista -b agent-plugin-export
-   git push git@github.com:getassista/agent-plugin.git agent-plugin-export:main
+   git push git@github.com:AssistaAI/agent-plugin.git agent-plugin-export:main
    git branch -D agent-plugin-export
    ```
 
@@ -47,14 +47,14 @@ starts there.
    the public repository directly. Make every change here, never there.
 3. Tag the release in the public repository: `v0.1.0`.
 4. Smoke test from a clean machine or a throwaway home directory:
-   - `claude plugin install assista --marketplace getassista/agent-plugin`,
+   - `claude plugin install assista --marketplace AssistaAI/agent-plugin`,
      then `/mcp` → `assista` → sign in, then `/assista:draft linkedin test`.
-   - `codex plugin marketplace add getassista/agent-plugin`,
+   - `codex plugin marketplace add AssistaAI/agent-plugin`,
      `codex plugin add assista@assista`, `codex mcp list` shows `assista`.
      (Verified against a local copy of this folder with Codex CLI 0.162.1.)
-   - `gemini extensions install https://github.com/getassista/agent-plugin`,
+   - `gemini extensions install https://github.com/AssistaAI/agent-plugin`,
      then `/mcp auth assista`. **(unverified: no Gemini CLI was available.)**
-   - `npx skills add getassista/agent-plugin` lists `assista-drafts`.
+   - `npx skills add AssistaAI/agent-plugin` lists `assista-drafts`.
      **(unverified)**
 
 ## 2. Anthropic's directory (claude.ai, Cowork and Claude Code)
@@ -66,7 +66,7 @@ One listing reaches all three; Claude Code users get it as `assista@synced`.
 2. Run the validation in step 0, then the pre-submission checklist at
    https://claude.com/docs/plugins/pre-submission-checklist.
 3. Open https://claude.ai/directory/manage and submit:
-   - the **plugin**: the repository `https://github.com/getassista/agent-plugin`;
+   - the **plugin**: the repository `https://github.com/AssistaAI/agent-plugin`;
    - the **connector**: `https://mcp.getassista.com/mcp`, OAuth. Ask for
      directory OAuth credentials at `mcp-review@anthropic.com` if the portal
      asks for a client id. **(unverified: the exact portal fields.)**
