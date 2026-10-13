@@ -40,6 +40,8 @@ invent: it is documented, and you can read it. Never write from a blank page.
 Writing one idea for several channels? Write each version for its channel.
 A LinkedIn post cut down to 280 characters is not an X post.
 
+For a graphic or a carousel instead of a text post, follow `references/graphics.md` (`get_brand_kit`, then `submit_graphics`).
+
 ## What a draft must contain
 
 Every draft needs one concrete thing that could only have come from this
