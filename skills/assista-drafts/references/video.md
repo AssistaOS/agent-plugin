@@ -52,7 +52,7 @@ saved. Fix and resend; no need to ask the user.
   "variant": "stacked",
   "format": "9x16",
   "fps": 30,
-  "durationMs": 13000,
+  "durationMs": 14000,
   "colors": { "ground": "bg", "ink": "fg", "accent": "accent" },
   "copy": {
     "headline": "of our customers came from a friend's recommendation.",
