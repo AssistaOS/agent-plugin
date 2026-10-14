@@ -109,7 +109,10 @@ Two reads help instead:
 
 `submit_drafts` returns one entry per draft, in order, with its `channel`,
 `status` (`queued_for_approval` or `rejected`), the `band` (green / amber /
-red), the specificity score, any flags and, for a queued draft, the `url` of
-its post in Assista. Assista sends the writer a note (email or Telegram) so
+red), the specificity score, any flags, `off_voice` and, for a queued draft,
+the `url` of its post in Assista. `off_voice` lists the measures (length, em
+dashes, sentence length…) where the draft sits far from this writer's own
+habit, with both numbers: a red or amber band with no flags is explained
+there. Assista sends the writer a note (email or Telegram) so
 they can approve in one tap. Tell the user what got queued, what was refused
 and why, and give them each `url`.
