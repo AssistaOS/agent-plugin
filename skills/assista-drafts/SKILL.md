@@ -12,7 +12,11 @@ invent: it is documented, and you can read it. Never write from a blank page.
 
 1. **`get_voice_brief`**: their compiled voice brief, their banned words, the
    lines they have told Assista to avoid, and their last few published posts.
-   Read the posts. They are the target, not the brief's adjectives.
+   Read the posts. They are the target, not the brief's adjectives. If
+   `voice_brief` is null, there is no brief yet: ask the writer for 10 or more
+   of their own past posts (pasted, or from their LinkedIn export), send them
+   with **`submit_past_posts`**, and call `get_voice_brief` again in a minute
+   or two. Its `next_step` says what happened.
 2. **`get_feedback`**: what they approved, edited or rejected recently, with
    their edits. An edit is the strongest signal you will get: whatever they
    changed, do not do again.
