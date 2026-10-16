@@ -8,7 +8,7 @@
       "name": "assista",
       "source": {
         "source": "url",
-        "url": "https://github.com/AssistaAI/agent-plugin.git"
+        "url": "https://github.com/AssistaOS/agent-plugin.git"
       },
       "policy": {
         "installation": "AVAILABLE",

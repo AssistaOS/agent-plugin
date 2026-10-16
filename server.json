@@ -4,7 +4,7 @@
   "title": "Assista",
   "description": "Drafts in your own voice for LinkedIn, X, Threads, Facebook and Instagram, sent to your approvals.",
   "repository": {
-    "url": "https://github.com/AssistaAI/agent-plugin",
+    "url": "https://github.com/AssistaOS/agent-plugin",
     "source": "github"
   },
   "version": "0.2.0",

@@ -62,13 +62,13 @@ Pick your tool. Each one is a single step, then a sign-in.
 ### Claude Code
 
 ```sh
-claude plugin install assista --marketplace AssistaAI/agent-plugin
+claude plugin install assista --marketplace AssistaOS/agent-plugin
 ```
 
 On Claude Code older than 2.1.292, use two steps:
 
 ```sh
-claude plugin marketplace add AssistaAI/agent-plugin
+claude plugin marketplace add AssistaOS/agent-plugin
 claude plugin install assista@assista
 ```
 
@@ -83,7 +83,7 @@ Settings → Connectors → Add custom connector, and paste
 ### Codex
 
 ```sh
-codex plugin marketplace add AssistaAI/agent-plugin
+codex plugin marketplace add AssistaOS/agent-plugin
 codex plugin add assista@assista
 codex mcp login assista
 ```
@@ -106,7 +106,7 @@ repository into `~/.cursor/plugins/local/assista` and reload the window.
 ### Gemini CLI
 
 ```sh
-gemini extensions install https://github.com/AssistaAI/agent-plugin
+gemini extensions install https://github.com/AssistaOS/agent-plugin
 ```
 
 Then run `/mcp auth assista` and sign in. `/draft` runs the same steps as
@@ -115,7 +115,7 @@ Then run `/mcp auth assista` and sign in. `/draft` runs the same steps as
 ### VS Code with GitHub Copilot
 
 Turn on `chat.plugins.enabled`, run **Chat: Install Plugin From Source** and
-enter `https://github.com/AssistaAI/agent-plugin`.
+enter `https://github.com/AssistaOS/agent-plugin`.
 
 Or add only the server:
 
@@ -145,7 +145,7 @@ in `opencode.json`, then `opencode mcp auth assista`.
 Add the writing guide:
 
 ```sh
-npx skills add AssistaAI/agent-plugin
+npx skills add AssistaOS/agent-plugin
 ```
 
 and point your tool at `https://mcp.getassista.com/mcp` (streamable HTTP). It
