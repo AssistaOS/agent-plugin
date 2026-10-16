@@ -7,6 +7,10 @@ claude mcp add --transport http assista https://mcp.getassista.com/mcp
 Your Claude writes it. Assista makes sure it sounds like you and waits for your
 tap. Free: your tool pays for the model, we never call one for you.
 
+![The MCP screen in Assista: pick Claude, Claude Code, Codex, Pi, Cursor, VS Code, Gemini CLI or OpenCode, copy one command, sign in](assets/connect-claude-code.jpg)
+
+![Today in Assista: the daily post, campaigns and graphics in your brand, every one waiting for your tap](assets/today.jpg)
+
 <!-- Badges: uncomment once each listing is live.
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-com.getassista%2Fassista-black)](https://registry.modelcontextprotocol.io)
 [![Smithery](https://smithery.ai/badge/assista)](https://smithery.ai)
