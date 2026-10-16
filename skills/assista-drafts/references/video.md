@@ -91,3 +91,5 @@ warnings, and a link to the post. Each plan makes a set number of videos a
 month; past it, `submit_video` answers `ok: false` with `renders` and nothing
 is saved (`get_usage` shows the count before you start). Tell the user: "Your video is being made and is waiting
 for your approval: <url>". It is not posted until they approve it in Assista.
+
+For footage or original animations, call `video_project` with `operation: "guide"` first. It returns the upload, timed transcript, edit plan and motion film formats without creating work or calling a model.
